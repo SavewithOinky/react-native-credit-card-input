@@ -34,6 +34,7 @@ export default class CCInput extends Component {
 
     onFocus: PropTypes.func,
     onChange: PropTypes.func,
+    onSubmitEditing: PropTypes.func,
     onBecomeEmpty: PropTypes.func,
     onBecomeValid: PropTypes.func,
     additionalInputProps: PropTypes.shape(TextInput.propTypes),
@@ -48,6 +49,7 @@ export default class CCInput extends Component {
     labelStyle: {},
     onFocus: () => {},
     onChange: () => {},
+    onSubmitEditing: () => {},
     onBecomeEmpty: () => {},
     onBecomeValid: () => {},
     additionalInputProps: {},
@@ -65,6 +67,7 @@ export default class CCInput extends Component {
 
   _onFocus = () => this.props.onFocus(this.props.field);
   _onChange = value => this.props.onChange(this.props.field, value);
+  _onSubmitEditing = () => this.props.onSubmitEditing();
 
   render() {
     const {
@@ -107,6 +110,7 @@ export default class CCInput extends Component {
             value={value}
             onFocus={this._onFocus}
             onChangeText={this._onChange}
+            onSubmitEditing={this._onSubmitEditing}
           />
         </View>
       </TouchableOpacity>

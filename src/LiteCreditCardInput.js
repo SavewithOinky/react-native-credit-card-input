@@ -118,6 +118,7 @@ const s = StyleSheet.create({
       status,
       onFocus,
       onChange,
+      onSubmitEditing,
       onBecomeEmpty,
       onBecomeValid,
       additionalInputsProps,
@@ -137,6 +138,7 @@ const s = StyleSheet.create({
 
       onFocus,
       onChange,
+      onSubmitEditing,
       onBecomeEmpty,
       onBecomeValid,
       additionalInputProps: additionalInputsProps[field],
